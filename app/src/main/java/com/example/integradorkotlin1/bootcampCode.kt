@@ -91,8 +91,8 @@ data class Vehicle(
 //   of the same type, none of which is the same.
 //   In this case, there cannot be two vehicles in the parking lot that are the same
 
-enum class VehicleType(val type: String, val fee: Int ){
-    CAR("Car", 20), MOTORBIKE("MotorBike", 15), MINIBUS("Mini Bus", 25), BUS("Bus",30);
+enum class VehicleType(val fee: Int ){
+    CAR(20), MOTORBIKE(15), MINIBUS(25), BUS(30);
 }
 
 fun main(){
