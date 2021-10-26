@@ -39,6 +39,10 @@ data class ParkingSpace(var vehicle: Vehicle,val parking: Parking){
 data class Parking(val  vehicles: MutableSet<Vehicle>){
     val maxSize = 20
 
+    fun listVehicles(){
+
+    }
+
     fun addVehicle(vehicle: Vehicle) : Boolean{
         if(vehicles.size < maxSize){
             vehicles.add(vehicle)
