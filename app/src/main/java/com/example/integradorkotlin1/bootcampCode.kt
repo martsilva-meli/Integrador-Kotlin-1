@@ -25,13 +25,8 @@ data class ParkingSpace(var vehicle: Vehicle,val parking: Parking){
     }
 
     fun calculateFee(type: VehicleType, parkedTime : Int, hasDiscountCard : Boolean): Int{
-        var cost = 0
-        when(type){
-            VehicleType.CAR -> cost += VehicleType.CAR.fee
-            VehicleType.MOTORBIKE -> cost += VehicleType.MOTORBIKE.fee
-            VehicleType.MINIBUS -> cost += VehicleType.MINIBUS.fee
-            VehicleType.BUS -> cost += VehicleType.BUS.fee
-        }
+        var cost = type.fee
+
         if(parkedTime > 120){
             cost += 5* (parkedTime-120 ) / 15
         }
